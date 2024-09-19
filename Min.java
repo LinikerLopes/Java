@@ -1,7 +1,9 @@
+import java.util.Scanner;
+
 public class Min{
     public static void main(String[] args) {
        
-        String nome = "Carlos";
+        /*String nome = "Carlos";
         int idade = 12;
         double peso = 57.30;
         double altura = 1.67;
@@ -23,7 +25,28 @@ public class Min{
             System.out.println("Seu IMC diz que sua classificacao está como obeso");
         } else{
             System.out.println("Temos de refazer o teste");
-        }
+        }*/
 
-    }
+       /*int valor = (int)(Math.random()*3001);
+        int contador = 0;
+      while(valor != 3000)
+      {
+        valor = (int)(Math.random()*3001);
+        System.out.println("Valor igual a  " + valor);
+        contador++;
+      }
+      System.out.println(contador);
+    }*/
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Digite seu cpf - somente numeros");
+        String cpf = scanner.nextLine();
+
+        if(cpf.length() <= 10){
+            System.out.println("Numero CPF incompleto!");
+        } else{
+            System.out.println("CPF Aceito");
+        }
+    scanner.close();
+}
 }
