@@ -37,7 +37,7 @@ public class Min{
       }
       System.out.println(contador);
     }*/
-        Scanner scanner = new Scanner(System.in);
+      /*  Scanner scanner = new Scanner(System.in);
         
         System.out.println("Digite seu cpf - somente numeros");
         String cpf = scanner.nextLine();
@@ -47,6 +47,80 @@ public class Min{
         } else{
             System.out.println("CPF Aceito");
         }
-    scanner.close();
+    scanner.close();*/
+
+    /*String[] inventores = new String[6];
+        inventores[0] = "Einstein";
+        inventores[1] = "Tesla";
+        inventores[2] = "Isaac Newton";
+
+        String inventor = inventores[1];
+        System.out.println(inventor);
+*/
+/*System.out.println("Quantos numeros você quer inserir? ");
+    Scanner quantidade = new Scanner(System.in);
+        int x = quantidade.nextInt();
+            int[] numeros = new int[x];
+                System.out.println("Digite " + x + " numeros inteiros:");
+        
+    Scanner teclado = new Scanner(System.in); //insere os numeros digitados
+        //=================================================
+            for(int i = 0; i < x; i++)
+                numeros[i] = teclado.nextInt();
+            for(int i=0; i < x ;i++)
+                System.out.println(numeros[i]);
+
+                    teclado.close();
+                    quantidade.close();
+*/
+Scanner teclado = new Scanner(System.in);
+    System.out.println("Você escolhe: 0 para par - 1 para impar");
+        int palavra = teclado.nextInt();
+
+    if (palavra == 0){
+        System.out.println("O jogador escolheu par!");
+    }   else{
+            System.out.println("O jogador escolheu impar!");
+            }
+
+Scanner numeroInteiro = new Scanner(System.in);
+    System.out.println("Agora escolha seu numero: ");
+        int escolha = numeroInteiro.nextInt();
+
+        if(escolha % 2 == 0 && palavra == 0){
+            System.out.println("Ambos estão de acordo");
+        } else {
+            System.out.println("Diferentes");
+        }
+
+        System.out.println("Agora a vez da cpu jogar...");
+        double cpu = Math.random()*3000;
+
+        double jogada = Math.ceil(cpu);
+        System.out.println("A Cpu jogou: " + jogada);
+
+        if (jogada % 2 == 0){
+            System.out.println("É um numero par.");
+        } else {
+            System.out.println("é um numero impar");
+        }
+
+        System.out.println(" CPU = " + jogada);
+        System.out.println("Jogador = " + escolha);
+
+        if (jogada % 2 == 0 && escolha % 2 == 0){
+            System.out.println("Ambos escolheram par.. EMPATE");
+        } else if (jogada % 2 == 1 && escolha % 2 == 1){
+            System.out.println("Ambos escolheram impar.. JOGAR DE NOVO");
+        }
+            
+        else {
+            System.out.println("Nenhum dos dois ganharam");
+        }
+
+
+        System.out.println("........ Jogo finalizado.......");
+numeroInteiro.close();
+teclado.close();
 }
 }
