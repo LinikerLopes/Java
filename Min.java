@@ -73,6 +73,10 @@ public class Min{
                     teclado.close();
                     quantidade.close();
 */
+char[] rounds =new char[3];
+int roundAtual = 0;
+
+while (roundAtual < 3){
 Scanner teclado = new Scanner(System.in);
     System.out.println("Você escolhe: 0 para par - 1 para impar");
         int palavra = teclado.nextInt();
@@ -111,16 +115,23 @@ Scanner numeroInteiro = new Scanner(System.in);
         if (jogada % 2 == 0 && escolha % 2 == 0){
             System.out.println("Ambos escolheram par.. EMPATE");
         } else if (jogada % 2 == 1 && escolha % 2 == 1){
-            System.out.println("Ambos escolheram impar.. JOGAR DE NOVO");
+            System.out.println("Ambos escolheram impar.. EMPATE");
         }
             
-        else {
-            System.out.println("Nenhum dos dois ganharam");
+        else if (escolha % 2 == 0 && jogada % 2 == 1){
+            System.out.println("Jogador ganhou");
+            rounds[roundAtual++] = 'J';
         }
-
+        else {
+            System.out.println("Computador ganhou");
+            rounds[roundAtual++] ='C';
+        }
+    
+        numeroInteiro.close();
+        teclado.close();
+    }
 
         System.out.println("........ Jogo finalizado.......");
-numeroInteiro.close();
-teclado.close();
+
 }
 }
