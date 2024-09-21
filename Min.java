@@ -182,7 +182,10 @@ while (roundAtual < 3) {
                 
             }
         }
+    
+        teclado.close();
     }
+
 
 
 
