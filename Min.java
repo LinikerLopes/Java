@@ -73,8 +73,7 @@ public class Min{
                     teclado.close();
                     quantidade.close();
 */
-
-/* Scanner teclado = new Scanner(System.in);
+Scanner teclado = new Scanner(System.in);
     System.out.println("Você escolhe: 0 para par - 1 para impar");
         int palavra = teclado.nextInt();
 
@@ -112,91 +111,24 @@ Scanner numeroInteiro = new Scanner(System.in);
         if (jogada % 2 == 0 && escolha % 2 == 0){
             System.out.println("Ambos escolheram par.. EMPATE");
         } else if (jogada % 2 == 1 && escolha % 2 == 1){
-            System.out.println("Ambos escolheram impar.. JOGAR DE NOVO");
+            System.out.println("Ambos escolheram impar.. EMPATE");
         }
             
+        else if (escolha % 2 == 0 && jogada % 2 == 1){
+            System.out.println("Jogador ganhou");
+            rounds[roundAtual++] = 'J';
+        }
         else {
-            System.out.println("Nenhum dos dois ganharam");
-        }
-
-
-        System.out.println("........ Jogo finalizado.......");
-numeroInteiro.close();
-teclado.close();*/
-
-char[] rounds = new char[3];
-int roundAtual = 0;
-
-System.out.println("Começando o jogo do Par ou Impar vs CPU");
-while (roundAtual < 3) {
-    Scanner teclado = new Scanner(System.in);
-    System.out.println("Escola PAR ou IMPAR - Digite 0 para PAR ou 1 para IMPAR");
-    int escolha = teclado.nextInt();
-
-    if (escolha == 0) {
-        System.out.println("O jogador escolheu PAR");        
-    }  else{
-        System.out.println("O jogador escolheu IMPAR");
-    }
-    
-    System.out.println("Faça sua jogada - Escolha 1 ou 2.");
-    int jogada1 = teclado.nextInt();
-
-    System.out.println("Agora é a vez da CPU");
-
-        double numero = Math.random();
-        double jogada2 = Math.ceil(numero) + 1;
-        System.out.println("CPU jogou" + jogada2);
-
-        System.out.println("Calculando o vencedor");
-
-
-        double soma = jogada1 + jogada2;
-        boolean resultadoPar = soma % 2 == 0;
-
-        if (resultadoPar == true && escolha == 0) {
-            System.out.println("O jogador ganhou este round");
-            rounds[roundAtual++] = 'J';
-        } else if (resultadoPar == false && escolha == 1) {
-            System.out.println("O jogador ganhou este round");
-            rounds[roundAtual++] = 'J';
-        } else {
-            System.out.println("A CPU ganhou este round");
-            rounds[roundAtual++] = 'C';
-        }
-
-    if (roundAtual == 2) {
-        if (rounds[0] == 'J' && rounds[1] == 'J') {
-            System.out.println("O jogador ganhou duas em sequencia!");
-            break;
-        }   else if (rounds[0]== 'C' && rounds[1] == 'C') {
-            System.out.println("A CPU ganhou duas em sequencia");
-            break;
-        }   else if (roundAtual == 3) {
-            if (rounds[2] == 'J') {
-                System.out.println("O jogador ganhou a melhor de 3");
-                break;
-            } else if (rounds[2] == 'C') {
-                System.out.println("A CPU ganhou a melhor de 3");
-                break;
-                
-            }
+            System.out.println("Computador ganhou");
+            rounds[roundAtual++] ='C';
         }
     
+        numeroInteiro.close();
         teclado.close();
     }
 
-
-
-
-
-
-
-
-
-
-}
-
-
+        System.out.println("........ Jogo finalizado.......");
+numeroInteiro.close();
+teclado.close();
 }
 }
