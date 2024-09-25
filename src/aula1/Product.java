@@ -13,7 +13,7 @@ public class Product{
     }
     public void addProducts (int quantity){
         this.quantity += quantity;
-        //this especifica que quer acessar oa tributo da classe
+        //this especifica que quer acessar o atributo da classe
     }
     public void removeProducts (int quantity){
         this.quantity -= quantity;
