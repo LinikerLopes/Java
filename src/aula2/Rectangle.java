@@ -1,4 +1,4 @@
-package src.exaula1;
+package src.aula2;
 
 public class Rectangle {
     public double Width;
